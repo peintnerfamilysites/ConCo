@@ -14,11 +14,13 @@ function checkScreenSize() {
   if (screenWidth <= 768) {
     // If the screen width is less than or equal to 768 pixels, render the mobile version of the home page.
     content.innerHTML = "";
-    content.appendChild(homeCreation("mobile"));
+    const screenSizeInfo = "mobile"
+    content.appendChild(homeCreation(screenSizeInfo));
   } else {
     // If the screen width is greater than 768 pixels, render the desktop version of the home page.
     content.innerHTML = "";
-    content.appendChild(homeCreation("desktop"));
+    const screenSizeInfo = "desktop";
+    content.appendChild(homeCreation(screenSizeInfo));
   }
 }   
 // Call the checkScreenSize function to render the appropriate version of the home page on initial load.
