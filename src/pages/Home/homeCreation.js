@@ -6,7 +6,7 @@ import createHomeFooter from "./homeFooter.js";
 // This will create the home page and return the html element to be rendered on the page.
 export default function homeCreation(screenSize) {
   // Call the home header creation function to create the header for the home page.
-  const homeHeader = createHomeHeader();
+  const homeHeader = createHomeHeader(screenSize);
   // Call the home body creation function to create the body for the home page.
   const homeBody = createHomeBody();
   // Call the home footer creation function to create the footer for the home page.

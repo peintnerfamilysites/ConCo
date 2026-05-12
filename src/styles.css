@@ -37,6 +37,9 @@ footer {
 }   
 /*Desktop styles*/
 @media (min-width: 768px) {
+    body{
+       background-color: aqua; 
+    }
     nav {
         justify-content: flex-start;
     }
