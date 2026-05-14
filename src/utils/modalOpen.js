@@ -6,11 +6,10 @@ export default function modalOpen(modalId) {
     const modalContainer = document.getElementById("modal-container");
     // Get current modal if it exists
     const currentModal = document.getElementById(modalId);
-    if (currentModal) {
-      // If the modal already exists, clear its content to close it.
-      currentModal.remove();
-      return;
-    }
+      if (currentModal) {
+        // If the modal already exists, clear its content to close it.
+        currentModal.remove();
+      }
     // Create the modal element
     const modal = createNavModal(modalId);
     // Append the modal to the modal container
