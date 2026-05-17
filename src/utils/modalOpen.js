@@ -7,6 +7,7 @@ export default function modalOpen(modalId) {
     // Get current modal if it exists
     const currentModal = document.getElementById(modalId);
       if (currentModal) {
+        console.log("Modal already exists, closing modal.");
         // If the modal already exists, clear its content to close it.
         currentModal.remove();
       }

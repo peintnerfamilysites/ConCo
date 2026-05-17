@@ -3,7 +3,6 @@ import modalOpen from "../../utils/modalOpen.js";
 
 // This function will create the navbar and return the html element to be rendered on the page.
 export default function createNavBar(screenSize) {
-  console.log(`Creating navbar for ${screenSize} screen size.`);
   // Create a container for the navbar and add the appropriate class to it.
   const navBarContainer = document.createElement("div");
   navBarContainer.classList.add("nav-bar-container");

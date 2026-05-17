@@ -7,12 +7,10 @@ export default function checkScreenSize() {
     // Check if the screen width is less than or equal to 768 pixels, which is the breakpoint for mobile devices.
     if (screenWidth <= 768) {
         // If the screen width is less than or equal to 768 pixels, render the mobile version of the home page.
-        content.innerHTML = "";
         const screenSizeInfo = "mobile";
         return screenSizeInfo;
     } else {
         // If the screen width is greater than 768 pixels, render the desktop version of the home page.
-        content.innerHTML = "";
         const screenSizeInfo = "desktop";
         return screenSizeInfo;
   }

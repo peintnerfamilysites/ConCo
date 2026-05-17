@@ -16,6 +16,7 @@ export default function createNavModal(id) {
   closeButton.addEventListener("click", () => {
     // When the close button is clicked close modal
     navModalContainer.remove();
+    
   });
   // Create a container for the navigation links and add the appropriate class to it.
   const navLinksContainer = document.createElement("div");
@@ -32,6 +33,7 @@ export default function createNavModal(id) {
     // Add an event listener to each navigation link to close the modal when clicked.
     navLink.addEventListener("click", () => {
       navModalContainer.remove(); 
+      content.innerHTML = "";
       // Check which link is clicked and do an action based on the link text.
       switch (link) {
         case "Home":
