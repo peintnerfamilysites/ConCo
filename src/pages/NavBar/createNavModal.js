@@ -1,3 +1,7 @@
+// Imports 
+import checkScreenSize from "../../utils/checkScreenSize.js";
+import homeCreation from "../Home/homeCreation.js";
+
 // Create the mobile navigation menu modal and return the html element to be rendered on the page.
 export default function createNavModal(id) {
   // Create a container for the mobile navigation menu and add the appropriate class to it.
@@ -19,10 +23,42 @@ export default function createNavModal(id) {
   // Create the navigation links and add them to the navigation links container.
   const navLinks = ["Home", "About Us", "Services", "Contact Us", "Insurance Help?"];
   navLinks.forEach(link => {
-    const navLink = document.createElement("a");
+    const navLink = document.createElement("div");
+    const content = document.getElementById("content");
+    const screenSizeInfo = checkScreenSize();
     navLink.classList.add("nav-link");
-    navLink.href = "#";
+    navLink.id = `${link.toLowerCase().replace(/\s/g, "-")}`;
     navLink.textContent = link;
+    // Add an event listener to each navigation link to close the modal when clicked.
+    navLink.addEventListener("click", () => {
+      navModalContainer.remove(); 
+      // Check which link is clicked and do an action based on the link text.
+      switch (link) {
+        case "Home":
+          // Call the Home function to render the home page when the "Home" link is clicked.
+          content.appendChild(homeCreation(screenSizeInfo));
+          console.log("Home link clicked");
+          break;
+        case "About Us":
+          // Scroll to the "About Us" section of the page when the "About Us" link is clicked.
+          document.getElementById("about-us").scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Services":
+          // Scroll to the "Services" section of the page when the "Services" link is clicked.
+          document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Contact Us":
+          // Scroll to the "Contact Us" section of the page when the "Contact Us" link is clicked.
+          document.getElementById("contact-us").scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Insurance Help?":
+          // Scroll to the "Insurance Help?" section of the page when the "Insurance Help?" link is clicked.
+          document.getElementById("insurance-help").scrollIntoView({ behavior: "smooth" });
+          break;
+        default:
+          break;
+      };     
+    }); 
     navLinksContainer.appendChild(navLink);
   });
   // Append the close button to the modal container.
