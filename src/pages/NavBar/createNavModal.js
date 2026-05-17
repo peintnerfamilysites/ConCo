@@ -2,6 +2,10 @@
 import checkScreenSize from "../../utils/checkScreenSize.js";
 import homeCreation from "../Home/homeCreation.js";
 import aboutUsCreation from "../AboutUs/aboutUsCreation.js";
+import servicesCreation from "../Services/servicesCreation.js";
+import contactUsCreation from "../ContactUs/contactUsCreation.js";
+import insuranceCreation from "../Insurance/insuranceCreation.js";
+
 
 // Create the mobile navigation menu modal and return the html element to be rendered on the page.
 export default function createNavModal(id) {
@@ -48,16 +52,19 @@ export default function createNavModal(id) {
           console.log("About Us link clicked");
           break;
         case "Services":
-          // Scroll to the "Services" section of the page when the "Services" link is clicked.
-          document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+          // Call the Services function to render the services page when the "Services" link is clicked.
+          content.appendChild(servicesCreation(screenSizeInfo));
+          console.log("Services link clicked");
           break;
         case "Contact Us":
-          // Scroll to the "Contact Us" section of the page when the "Contact Us" link is clicked.
-          document.getElementById("contact-us").scrollIntoView({ behavior: "smooth" });
+          // Call the Contact Us function to render the contact us page when the "Contact Us" link is clicked.
+          content.appendChild(contactUsCreation(screenSizeInfo));
+          console.log("Contact Us link clicked");
           break;
         case "Insurance Help?":
-          // Scroll to the "Insurance Help?" section of the page when the "Insurance Help?" link is clicked.
-          document.getElementById("insurance-help").scrollIntoView({ behavior: "smooth" });
+          // Call the Insurance Help function to render the insurance help page when the "Insurance Help?" link is clicked.
+          content.appendChild(insuranceCreation(screenSizeInfo));
+          console.log("Insurance Help? link clicked");
           break;
         default:
           break;
