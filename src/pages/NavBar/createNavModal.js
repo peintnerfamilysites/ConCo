@@ -1,6 +1,7 @@
 // Imports 
 import checkScreenSize from "../../utils/checkScreenSize.js";
 import homeCreation from "../Home/homeCreation.js";
+import aboutUsCreation from "../AboutUs/aboutUsCreation.js";
 
 // Create the mobile navigation menu modal and return the html element to be rendered on the page.
 export default function createNavModal(id) {
@@ -42,8 +43,9 @@ export default function createNavModal(id) {
           console.log("Home link clicked");
           break;
         case "About Us":
-          // Scroll to the "About Us" section of the page when the "About Us" link is clicked.
-          document.getElementById("about-us").scrollIntoView({ behavior: "smooth" });
+          // Call the About Us function to render the about us page when the "About Us" link is clicked.
+          content.appendChild(aboutUsCreation(screenSizeInfo));
+          console.log("About Us link clicked");
           break;
         case "Services":
           // Scroll to the "Services" section of the page when the "Services" link is clicked.
