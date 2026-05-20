@@ -18,9 +18,8 @@ body {
     right: 10px;
     top: 50%;
     bottom: 50%;
-    width: 8%;
-    font-size: 5.5rem;
-    color: red;
+    width: 15%;
+    cursor: pointer;
 }
 #mobile-nav-menu {
     display: flex;
@@ -51,6 +50,11 @@ body {
     text-align: center;
     border: 1px yellow solid;
     font-size: 150%;
+}
+.nav-modal-main-logo {
+    width: 35%;
+    position: absolute;
+    top: 5%;
 }
 /*Desktop styles*/
 @media (min-width: 768px) {
