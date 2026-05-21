@@ -56,6 +56,65 @@ body {
     position: absolute;
     top: 5%;
 }
+/* Home Body Styles Mobile */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: darkslategrey;
+
+}
+.home-body-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    height: 95%;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.home-body-main-logo {
+    width: 50%;
+    padding-bottom: .5rem;
+}
+.home-body-phone-number {
+    font-size: 130%;
+    color: red;
+    font-weight: 700;
+    text-decoration: none;
+    padding-bottom: 1.5rem;
+}
+.home-body-website-purpose {
+    font-size: 110%;
+    color: black;
+    background-color: green;
+    border-radius: 500px;
+    border: 1px solid yellow;
+    padding: 2rem;
+    padding-left: 3rem;
+    text-align: center;
+    text-align: start;
+}
+.home-body-job-container {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+.home-body-job-container::before {
+    content: "Jobs We Have Completed.";
+    display: block;
+    font-size: 120%;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
 /*Desktop styles*/
 @media (min-width: 768px) {
     body{
