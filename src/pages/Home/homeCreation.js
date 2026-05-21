@@ -12,7 +12,7 @@ export default function homeCreation(screenSize) {
   // Call a Navbar creator function to create the header for the home page.
   const navBar = createNavBar(screenSize);
   // Call the home body creation function to create the body for the home page.
-  const homeBody = createHomeBody();
+  const homeBody = createHomeBody(screenSize);
   // Create a container for the home page and append the header, body, and footer to it.
   const homeContainer = document.createElement("div");
   homeContainer.classList.add("home-container");
