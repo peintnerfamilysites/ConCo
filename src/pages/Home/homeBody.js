@@ -3,6 +3,8 @@ import SpringTimeInTheOzarks from "../../assets/Springtime.png";
 import phoneNumber from "../../assets/CallUs.png"
 import RoofGutter from "../../assets/RoofGutter.png";
 import GarageDoors from "../../assets/GarageDoors.png";
+import ShingleRoofing from "../../assets/ShingleRoofing.png";
+import VinylSiding from "../../assets/VinylSiding.png";
 import checkScreenSize from "../../utils/checkScreenSize.js";
 import screenSizeInfo from "../../utils/checkScreenSize.js";
 import contactUsCreation from "../ContactUs/contactUsCreation.js";
@@ -51,15 +53,23 @@ export default function createHomeBody(screenSize) {
     const jobContainer = document.createElement("div");
     jobContainer.classList.add("home-body-job-container");
     // Create an image element for each service that the company offers and set its source to the appropriate image file. Add the appropriate class to each image element.
-    // TBD
+    const shingleRoofing = document.createElement("img");
+    shingleRoofing.src = ShingleRoofing;
+    shingleRoofing.classList.add("home-body-job-image","animate__animated","animate__fadeIn");
+    const vinylSiding = document.createElement("img");
+    vinylSiding.src = VinylSiding;
+    vinylSiding.classList.add("home-body-job-image","animate__animated","animate__fadeIn");
+    // Append each service image to the job container.
+    jobContainer.appendChild(shingleRoofing);
+    jobContainer.appendChild(vinylSiding);    
 
     // Append the Main Site Logo to the home body container.
     homeBodyContainer.appendChild(mainSiteLogo);
     homeBodyContainer.appendChild(websitePurpose);
-    homeBodyContainer.appendChild(PhoneNumber);
     homeBodyContainer.appendChild(roofingAndGutterShowcase);
     homeBodyContainer.appendChild(garageDoorShowcase);
     homeBodyContainer.appendChild(jobContainer);
+    homeBodyContainer.appendChild(PhoneNumber);
     // Return the home body container to be appended to the home page container.
     return homeBodyContainer;
   } else {
