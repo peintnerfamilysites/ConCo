@@ -1,5 +1,7 @@
 import HomeMainLogo from "../../assets/contactUs.png";
 import SpringTimeInTheOzarks from "../../assets/Springtime.png";
+import phoneNumber from "../../assets/CallUs.png"
+import RoofGutter from "../../assets/RoofGutter.png";
 import checkScreenSize from "../../utils/checkScreenSize.js";
 import screenSizeInfo from "../../utils/checkScreenSize.js";
 import contactUsCreation from "../ContactUs/contactUsCreation.js";
@@ -25,12 +27,21 @@ export default function createHomeBody(screenSize) {
     // Create an anchor element for the phone number and set its href attribute to the appropriate phone number.
     const PhoneNumber = document.createElement("a");
     PhoneNumber.href = "tel:903-417-7043";
-    PhoneNumber.textContent = "Call Us: 903-417-7043";
     PhoneNumber.classList.add("home-body-phone-number","animate__animated","animate__fadeIn");
+    // Create an img element for the phone number and set its source to the appropriate image file. Add the appropriate class to the image element.
+    const phoneNumberImage = document.createElement("img");
+    phoneNumberImage.src = phoneNumber;
+    phoneNumberImage.classList.add("home-body-phone-number-image");
+    // Append the phone number image to the anchor element.
+    PhoneNumber.appendChild(phoneNumberImage);
     // Create an image element for the websites springtime offerings and set its source to the appropriate image file. Add the appropriate class to the image element.
     const websitePurpose = document.createElement("img");
     websitePurpose.src = SpringTimeInTheOzarks;
     websitePurpose.classList.add("home-body-website-purpose","animate__animated","animate__fadeIn");   
+    // Create an img element for the roofing and gutter showcase and set its source to the appropriate image file. Add the appropriate class to the image element.
+    const roofingAndGutterShowcase = document.createElement("img");
+    roofingAndGutterShowcase.src = RoofGutter;
+    roofingAndGutterShowcase.classList.add("home-body-roofing-and-gutter-showcase","animate__animated","animate__fadeIn");
     // Create a container to hold some images that can be clicked and scrolled through to show the different services that the company offers. Add the appropriate class to the container.  
     const jobContainer = document.createElement("div");
     jobContainer.classList.add("home-body-job-container");
@@ -41,6 +52,7 @@ export default function createHomeBody(screenSize) {
     homeBodyContainer.appendChild(mainSiteLogo);
     homeBodyContainer.appendChild(websitePurpose);
     homeBodyContainer.appendChild(PhoneNumber);
+    homeBodyContainer.appendChild(roofingAndGutterShowcase);
     homeBodyContainer.appendChild(jobContainer);
     // Return the home body container to be appended to the home page container.
     return homeBodyContainer;
