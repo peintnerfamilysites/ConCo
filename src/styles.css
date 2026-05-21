@@ -94,6 +94,12 @@
         margin-top: -2rem;
         z-index: 1;
     }
+    .home-body-garage-door-showcase {
+        width: 100%;
+        background-color: black;
+        padding-top: .15rem;
+        z-index: 1;
+    }
     .home-body-job-container {
         width: 100%;
         height: 100%;

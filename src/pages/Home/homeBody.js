@@ -2,6 +2,7 @@ import HomeMainLogo from "../../assets/contactUs.png";
 import SpringTimeInTheOzarks from "../../assets/Springtime.png";
 import phoneNumber from "../../assets/CallUs.png"
 import RoofGutter from "../../assets/RoofGutter.png";
+import GarageDoors from "../../assets/GarageDoors.png";
 import checkScreenSize from "../../utils/checkScreenSize.js";
 import screenSizeInfo from "../../utils/checkScreenSize.js";
 import contactUsCreation from "../ContactUs/contactUsCreation.js";
@@ -42,6 +43,10 @@ export default function createHomeBody(screenSize) {
     const roofingAndGutterShowcase = document.createElement("img");
     roofingAndGutterShowcase.src = RoofGutter;
     roofingAndGutterShowcase.classList.add("home-body-roofing-and-gutter-showcase","animate__animated","animate__fadeIn");
+    // Create an img element for the garage door showcase and set its source to the appropriate image file. Add the appropriate class to the image element.
+    const garageDoorShowcase = document.createElement("img");
+    garageDoorShowcase.src = GarageDoors;
+    garageDoorShowcase.classList.add("home-body-garage-door-showcase","animate__animated","animate__fadeIn");
     // Create a container to hold some images that can be clicked and scrolled through to show the different services that the company offers. Add the appropriate class to the container.  
     const jobContainer = document.createElement("div");
     jobContainer.classList.add("home-body-job-container");
@@ -53,6 +58,7 @@ export default function createHomeBody(screenSize) {
     homeBodyContainer.appendChild(websitePurpose);
     homeBodyContainer.appendChild(PhoneNumber);
     homeBodyContainer.appendChild(roofingAndGutterShowcase);
+    homeBodyContainer.appendChild(garageDoorShowcase);
     homeBodyContainer.appendChild(jobContainer);
     // Return the home body container to be appended to the home page container.
     return homeBodyContainer;
