@@ -2,7 +2,7 @@ import HomeMainLogo from "../../assets/contactUs.png";
 import SpringTimeInTheOzarks from "../../assets/Springtime.png";
 import phoneNumber from "../../assets/CallUs.png"
 import RoofGutter from "../../assets/RoofGutter.png";
-import GarageDoors from "../../assets/GarageDoors.png";
+import GarageDoors from "../../assets/SomeServices.png";
 import ShingleRoofing from "../../assets/ShingleRoofing.png";
 import VinylSiding from "../../assets/VinylSiding.png";
 import checkScreenSize from "../../utils/checkScreenSize.js";
