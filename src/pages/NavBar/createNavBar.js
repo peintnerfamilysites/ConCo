@@ -10,7 +10,12 @@ export default function createNavBar(screenSize) {
   if (screenSize === "mobile") {
     // If the screen size is mobile, create a mobile navbar.
     const navBarLogo = document.createElement("img");
-    navBarLogo.classList.add("nav-bar-logo","animate__animated", "animate__heartBeat","animate__slow");
+    navBarLogo.classList.add(
+      "nav-bar-logo",
+      "animate__animated",
+      "animate__heartBeat",
+      "animate__slow",
+    );
     navBarLogo.src = Logo;
     navBarLogo.alt = "Barneys Supply Company Logo";
     navBarLogo.addEventListener("click", () => {
@@ -20,8 +25,7 @@ export default function createNavBar(screenSize) {
     navBarContainer.appendChild(navBarLogo);
   } else {
     // If the screen size is desktop, create a desktop navbar.
-    
   }
-  // Return the navbar container to be rendered on the page.              
+  // Return the navbar container to be rendered on the page.
   return navBarContainer;
 }

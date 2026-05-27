@@ -2,7 +2,7 @@
 import "./styles.css";
 import "animate.css";
 import checkScreenSize from "./utils/checkScreenSize.js";
-import homeCreation from "./pages/Home/homeCreation.js";    
+import homeCreation from "./pages/Home/homeCreation.js";
 // Get the content element from the DOM to render the home page on it.
 const content = document.getElementById("content");
 const screenSizeInfo = checkScreenSize();
@@ -16,4 +16,4 @@ if (screenSizeInfo === "mobile") {
 window.addEventListener("resize", () => {
   const newScreenSizeInfo = checkScreenSize();
   content.appendChild(homeCreation(newScreenSizeInfo));
-});   
+});
